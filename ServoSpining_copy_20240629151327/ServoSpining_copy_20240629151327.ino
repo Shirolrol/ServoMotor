@@ -6,6 +6,9 @@ Servo servo3;  // Створюємо об'єкт Servo для керування
 Servo servo4;  // Створюємо об'єкт Servo для керування сервомотором на піні 26
 
 bool isServo1;
+bool isServo2;
+bool isServo3;
+bool isServo4;
 
 void setup() {
   servo1.attach(12);  // Приєднуємо сервомотор до піна 12
@@ -26,9 +29,35 @@ void loop() {
   }
   isServo1=!isServo1;
 
-  // servo2.write(60);  
-  // servo3.write(40);  
-  // servo4.write(80);  
+if (isServo2){
+    servo1.write(100);
+    Serial.println("100 Градусів");
+  }
+  else {
+    servo1.write(0);
+     Serial.println("0 Градусів");
+  }
+  isServo2=!isServo2;
+
+  if (isServo3){
+    servo1.write(110);
+    Serial.println("110 Градусів");
+  }
+  else {
+    servo1.write(0);
+     Serial.println("0 Градусів");
+  }
+  isServo3=!isServo3;
+
+  if (isServo4){
+    servo1.write(70);
+    Serial.println("70 Градусів");
+  }
+  else {
+    servo1.write(0);
+     Serial.println("0 Градусів");
+  }
+  isServo4=!isServo4;
 
   delay(1000);  // Затримка 1 секунда (1000 мілісекунд)
 }
