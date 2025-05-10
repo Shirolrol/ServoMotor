@@ -1,0 +1,13 @@
+<div class="holder">
+  <div class="description">
+    {{ name }}
+
+    <span class="status" [class.on]="isOn" [class.off]="!isOn"></span>
+  </div>
+  <div class="buttons">
+    <button class="on" (click)="onButtonOnClick()" [disabled]="isOn">On</button>
+    <button class="off" (click)="onButtonOffClick()" [disabled]="!isOn">
+      Off
+    </button>
+  </div>
+</div>

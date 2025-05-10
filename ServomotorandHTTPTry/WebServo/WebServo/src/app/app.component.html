@@ -1,0 +1,9 @@
+<app-led [isOn]="led" (ledClick)="onLedClick()"> </app-led>
+<app-servo
+  *ngFor="let servo of activeServos"
+  [name]="servo.name"
+  [isOn]="servo.isOn"
+  (buttonOnClick)="onButtonOnClick($event)"
+  (buttonOffClick)="onButtonOffClick($event)"
+>
+</app-servo>
